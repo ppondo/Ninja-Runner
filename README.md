@@ -40,5 +40,5 @@
     </li>
 </ul>
 
-![Wireframe](https://github.com/ppondo/Uncorkd/blob/master/app/assets/images/brew-show.png "Wireframe")
+![Wireframe](https://github.com/ppondo/Ninja-Runner/blob/master/assets/wireframe.png "Wireframe")
 

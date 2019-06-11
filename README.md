@@ -39,6 +39,7 @@
       <p>Work out any bugs and complete MVPs  </p>  
     </li>
 </ul>
+
 ## Wireframe
 
 ![Wireframe](https://github.com/ppondo/Ninja-Runner/blob/master/assets/wireframe.png)

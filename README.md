@@ -1,6 +1,5 @@
 # Ninja Runner
 
-## Overview
    Ninja Runner is a JavaScript game where the player must run through the streets avoiding obstacles to get the highest score. Collecting shurikens along the way will increase your score! The goal is to get the furthest distance without falling off of a platform or hitting an obstacle.
   
 ## Functionality and MVP Features

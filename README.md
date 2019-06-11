@@ -4,11 +4,17 @@
   
 ## Functionality and MVP Features
 <ul>
-    <li>Collision detection for when ninja falls off platform, collects shurikens, or hits obstacle.</li>
-    <li>Ninja's ability to slide and jump.</li>
+    <li>Collision detection for when ninja falls off platform, collects shurikens, or hits obstacle.
+      <p>Falling off of a platform or hitting an obstacle will result in rendering 'game over' message.</p>
+    </li>
+    <li>Ninja's ability to slide and jump.
+       <p>This will include different animations for jumping and sliding, jumping will allow the ninja to get over obstacles, while sliding will allow the ninja to get underneath obstcales the ninja would otherwise not be able to get past.</p>
+    </li>
     <li>Properly measuring distance and counting shurikens for total score.</li>
     <li>Background music that is mutable</li>
-    <li>Parallax background to simulate running experience.</li>
+    <li>Parallax background to simulate running experience.
+      <p>Different parts of the background will scroll at different rates as the player moves. For Instance the sky will move slower than a tree as the tree is 'closer' to the character.</p>
+    </li>
 </ul>
 
 ## Technologies

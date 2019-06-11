@@ -5,7 +5,7 @@
   
 ## Functionality and MVP Features
 <ul>
-    <li>Collision detection for when ninja falls off platform, collects shurikens, or hit obstacle.</li>
+    <li>Collision detection for when ninja falls off platform, collects shurikens, or hits obstacle.</li>
     <li>Ninja's ability to slide and jump.</li>
     <li>Properly measuring distance and counting shurikens for total score.</li>
     <li>Background music that is mutable</li>
@@ -23,7 +23,7 @@
 <ul>
     <li>Day 1
       <p>Set up webpack, basic file structure, and review canvas and Object-Oriented JS.</p> 
-      <p>Begin writing code for runnning logic and displaying ninja sprite. </p> 
+      <p>Begin writing code for running logic and displaying ninja sprite. </p> 
     </li>
     <li>Day 2
       <p>Work on character controls (jumping, sliding).</p> 

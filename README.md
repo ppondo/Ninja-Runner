@@ -19,6 +19,17 @@
     <li>CSS for UI styling</li>
 </ul>
 
+### File Structure
+<ul>
+    <li>Game.js</li>
+    <li>Platform.js</li>
+    <li>Ninja.js</li>
+    <li>Obstacle.js</li>
+    <li>Shuriken.js</li>
+    <li>Parallax.js</li>
+    <li>Sidebar.js</li>
+</ul>
+
 ## Implementation Timeline
 <ul>
     <li>Day 1

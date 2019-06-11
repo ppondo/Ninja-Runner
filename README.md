@@ -38,6 +38,8 @@
       <p>Work on styling and aesthetics</p>
       <p>Work out any bugs and complete MVPs  </p>  
     </li>
+
+    
 </ul>
 
 

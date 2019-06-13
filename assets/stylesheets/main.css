@@ -17,14 +17,14 @@ canvas {
     top: 99px;
     border: 4px solid rgb(70, 27, 71);
     border-radius: 6px;
-    background: url(../images/parallax/full_bg.png);
+    /* background: url(../images/parallax/full_bg.png); */
 }
 
 .title {
     font-size: 75px;
     text-align: center;
     font-family: samuraiBob;
-    color: #eee
+    color: rgb(70, 27, 71);
 }
 
 .canvas-container {

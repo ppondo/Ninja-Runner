@@ -28,14 +28,14 @@ const LAYER4 = {
     y: 0
 }
 const LAYER5 = {
-    vel: 2,
+    vel: 1.5,
     scroll: 1,
     src: "./assets/images/parallax/layer_05.png",
     x: 0,
     y: 0
 }
 const LAYER6 = {
-    vel: 1,
+    vel: 0.6,
     scroll: 1,
     src: "./assets/images/parallax/layer_06.png",
     x: 0,

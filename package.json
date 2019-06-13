@@ -1,0 +1,31 @@
+{
+    "name": "ninja_runner",
+    "version": "1.0.0",
+    "description": "# Ninja Runner",
+    "private": true,
+    "directories": {
+        "src": "src"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "webpack --mode=development --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ppondo/Ninja-Runner.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ppondo/Ninja-Runner/issues"
+    },
+    "homepage": "https://github.com/ppondo/Ninja-Runner#readme",
+    "dependencies": {
+        "lodash": "^4.17.11"
+    },
+    "devDependencies": {
+        "webpack": "^4.33.0",
+        "webpack-cli": "^3.3.4"
+    }
+}

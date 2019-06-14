@@ -1,35 +1,39 @@
 const CRATE1 = {
     src: './assets/images/obstacles/crate.png',
-    width: 106,
-    height: 106,
+    width: (106 * 0.5),
+    height: (106 * 0.5),
     xPos: 850,
-    vel: 4
+    yPos: 307,
+    vel: 3.5
 };
 
 const CRATE2 = {
     src: './assets/images/obstacles/crate.png',
-    width: 106,
-    height: 106,
+    width: (106 * 0.5),
+    height: (106 * 0.5),
     xPos: 1150,
-    vel: 4
+    yPos: 307,
+    vel: 3.5
 };
 
 
 const BUSH1 = {
     src: './assets/images/obstacles/dead_bush.png',
-    width: 132,
-    height: 74,
-    xPos: 1450,
-    vel: 4
+    width: (132 * 0.6),
+    height: (74 * 0.6),
+    xPos: 1475,
+    yPos: 315,
+    vel: 3.5
 };
 
 
 const BUSH2 = {
     src: './assets/images/obstacles/dead_bush.png',
-    width: 132,
-    height: 74,
+    width: (132 * 0.6),
+    height: (74 * 0.6),
     xPos: 1900,
-    vel: 4
+    yPos: 315,
+    vel: 3.5
 };
 
 class Obstacles {
@@ -42,6 +46,7 @@ class Obstacles {
         this.canvas = canvas
         this.ctx = ctx;
 
+        this.obstaclesArray = [this.crate1, this.crate2, this.bush1, this.bush2]
         this.draw = this.draw.bind(this);
     }
 
@@ -68,43 +73,43 @@ class Obstacles {
         this.ctx.drawImage(
             this.crate1Img, 
             this.crate1.xPos, 
-            307,
-            (this.crate1.width * 0.5), 
-            (this.crate1.height * 0.5)
+            this.crate1.yPos,
+            this.crate1.width, 
+            this.crate1.height
         );
 
         this.ctx.drawImage(
             this.crate2Img,
             this.crate2.xPos,
-            307,
-            (this.crate2.width * 0.5),
-            (this.crate2.height * 0.5)
+            this.crate2.yPos,
+            this.crate2.width,
+            this.crate2.height
         );
 
         this.ctx.drawImage(
             this.bush1Img,
             this.bush1.xPos,
-            315,
-            (this.bush1.width * 0.6),
-            (this.bush1.height * 0.6)
+            this.bush1.yPos,
+            this.bush1.width,
+            this.bush1.height
         );
 
         this.ctx.drawImage(
             this.bush2Img,
             this.bush2.xPos,
-            315,
-            (this.bush2.width * 0.6),
-            (this.bush2.height * 0.6)
+            this.bush2.yPos,
+            this.bush2.width,
+            this.bush2.height
         );
 
-        if (this.crate1.xPos <= -this.canvas.width + 200) {
-            this.crate1.xPos = 820;
-        } else if (this.crate2.xPos <= -this.canvas.width + 200) {
-            this.crate2.xPos = 1200;
-        } else if (this.bush1.xPos <= -this.canvas.width + 200) {
-            this.bush1.xPos = 1475;
-        } else if (this.bush2.xPos <= -this.canvas.width + 200) {
-            this.bush2.xPos = 1800;
+        if (this.crate1.xPos <= -this.canvas.width) {
+            this.crate1.xPos = 845;
+        } else if (this.crate2.xPos <= -this.canvas.width) {
+            this.crate2.xPos = 1000;
+        } else if (this.bush1.xPos <= -this.canvas.width) {
+            this.bush1.xPos = 1350;
+        } else if (this.bush2.xPos <= -this.canvas.width) {
+            this.bush2.xPos = 1850;
         }
     }
 }

@@ -31,17 +31,24 @@ class Game {
       this.obstacles = new Obstacles(this.ctx, this.canvas);
     }
 
-    // drawObstacles() {
-    //     this.obstacles.forEach(obs => {
-    //         obs.draw();
-    //     });
-    // }
+    detectCollision() {
+        if (this.ninja.collidedWith(this.obstacles.crate1)) {
+            alert('Game Over')
+        } else if (this.ninja.collidedWith(this.obstacles.crate2)) {
+            alert('Game Over')
+        } else if (this.ninja.collidedWith(this.obstacles.bush1)) {
+            alert('Game Over')
+        } else if (this.ninja.collidedWith(this.obstacles.bush2)) {
+            alert('Game Over')
+        }
+    }
 
     render() {
         this.background.drawLayers();
         this.ninja.draw();
         this.ninja.frames++
         this.obstacles.draw();
+        this.detectCollision();
         window.requestAnimationFrame(this.render);
     }
 

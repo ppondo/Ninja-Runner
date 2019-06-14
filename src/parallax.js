@@ -1,30 +1,30 @@
 const LAYER1 = {
-    vel: 4.0,
+    vel: 3.5,
     src: "./assets/images/parallax/layer_01.png",
     x: 0,
     y: 0
 
 }
 const LAYER2 = {
-    vel: 3.75,
+    vel: 3.25,
     src: "./assets/images/parallax/layer_02.png",
     x: 0,
     y: 0
 }
 const LAYER3 = {
-    vel: 3,
+    vel: 2.5,
     src: "./assets/images/parallax/layer_03.png",
     x: 0,
     y: 0
 }
 const LAYER4 = {
-    vel: 2.5,
+    vel: 2.0,
     src: "./assets/images/parallax/layer_04.png",
     x: 0,
     y: 0
 }
 const LAYER5 = {
-    vel: 1.5,
+    vel: 1.0,
     src: "./assets/images/parallax/layer_05.png",
     x: 0,
     y: 0

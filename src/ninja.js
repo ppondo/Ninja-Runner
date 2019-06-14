@@ -15,7 +15,7 @@ class Ninja {
         this.ctx = ctx;
         this.xPos = 175;
         this.yPos = 280;
-        this.speed = 0;
+        this.vel = 0;
         this.movement = 'running';
         this.getImages();
         this.width = 200;
@@ -60,18 +60,36 @@ class Ninja {
 
     jump() {
         this.movement = 'jump';
-        this.jumpHeight = 20;
+        if (this.jumpCount === 1) {
+            this.jumpHeight = 8;
+        } else {
+            this.jumpHeight = 10;
+        }
         this.jumpCount += 1;
     }
 
+    collidedWith(obstacle) {
+        let hitBoxX = obstacle.xPos + obstacle.width
+        let hitBoxY = obstacle.yPos + obstacle.height
+        if (this.yPos > hitBoxY || (this.yPos + 84) < hitBoxY){
+            return false;
+        } else if (this.xPos > (hitBoxX - 5) || (this.xPos + 66) < (hitBoxX - 30)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     draw() {
+        this.xPos -= this.vel;
+
         if (this.movement === 'running') {
             this.updateFrame();
             this.ctx.drawImage(this.runImg, this.srcX, this.srcY, this.width, this.height, this.xPos, this.yPos, 66.67, 84);
         } else if (this.movement === 'jump') {
             this.updateFrame();
             this.yPos -= this.jumpHeight;
-            this.jumpHeight -= 2;
+            this.jumpHeight -= 0.5;
             if (this.jumpHeight === 0) {
                 debugger
                 this.movement = 'drop';
@@ -86,7 +104,7 @@ class Ninja {
                 this.jumpCount = 0;
             } else {
                 this.yPos += this.jumpHeight;
-                this.jumpHeight += 1;
+                this.jumpHeight += 0.5;
             }
             this.ctx.drawImage(this.jumpImg, this.srcX, this.srcY, this.width, this.height, this.xPos, this.yPos, 66.67, 84);
         }

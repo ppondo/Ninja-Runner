@@ -1,6 +1,5 @@
 const LAYER1 = {
     vel: 4.0,
-    scroll: 1,
     src: "./assets/images/parallax/layer_01.png",
     x: 0,
     y: 0
@@ -8,64 +7,54 @@ const LAYER1 = {
 }
 const LAYER2 = {
     vel: 3.75,
-    scroll: 1,
     src: "./assets/images/parallax/layer_02.png",
     x: 0,
     y: 0
 }
 const LAYER3 = {
     vel: 3,
-    scroll: 1,
     src: "./assets/images/parallax/layer_03.png",
     x: 0,
     y: 0
 }
 const LAYER4 = {
     vel: 2.5,
-    scroll: 1,
     src: "./assets/images/parallax/layer_04.png",
     x: 0,
     y: 0
 }
 const LAYER5 = {
     vel: 1.5,
-    scroll: 1,
     src: "./assets/images/parallax/layer_05.png",
     x: 0,
     y: 0
 }
 const LAYER6 = {
     vel: 0.6,
-    scroll: 1,
     src: "./assets/images/parallax/layer_06.png",
     x: 0,
     y: 0
 }
 const LAYER7 = {
     vel: 0.3,
-    scroll: 1,
-    dx: 1500,
     src: "./assets/images/parallax/layer_07.png",
     x: 0,
     y: 0
 }
 const LAYER8 = {
     vel: 0.3,
-    scroll: 1,
     src: "./assets/images/parallax/layer_08.png",
     x: 0,
     y: 0
 }
 const LAYER9 = {
     vel: 0.3,
-    scroll: 1,
     src: "./assets/images/parallax/layer_09.png",
     x: 0,
     y: 0
 }
 const LAYER10 = {
     vel: 0.3,
-    scroll: 1,
     src: "./assets/images/parallax/layer_10.png",
     x: 0,
     y: 0
@@ -192,45 +181,6 @@ class Parallax {
             this.ten.x = 0;
         }
     }
-
-    // resetLayers() {
-    //     this.one.x = 0;
-    //     this.one.y = 0;
-
-    //     this.two.x = 0;
-    //     this.two.y = 0;
-
-    //     this.three.x = 0;
-    //     this.three.y = 0;
-
-    //     this.four.x = 0;
-    //     this.four.y = 0;
-
-    //     this.five.x = 0;
-    //     this.five.y = 0;
-
-    //     this.six.x = 0;
-    //     this.six.y = 0;
-
-    //     this.seven.x = 0;
-    //     this.seven.y = 0;
-
-    //     this.eight.x = 0;
-    //     this.eight.y = 0;
-
-    //     this.nine.x = 0;
-    //     this.nine.y = 0;
-
-    //     this.ten.x = 0;
-    //     this.ten.y = 0;
-    // }
-
-    // renderLayers() {
-       
-    //     debugger
-    //     this.drawLayers();
-    //     // this.resetLayers();
-    // }
 }
 
 export default Parallax;

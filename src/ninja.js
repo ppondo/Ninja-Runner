@@ -49,7 +49,6 @@ class Ninja {
         if (this.currentFrame === this.frameCount) {
             this.currentFrame = 0;
         }
-        debugger;
         if (this.movement === 'running' && this.frames % 2 === 0) {
             this.currentFrame = (this.currentFrame + 1);
         } else if (this.movement === 'drop') {
@@ -61,7 +60,7 @@ class Ninja {
 
     jump() {
         this.movement = 'jump';
-        this.jumpHeight = 15;
+        this.jumpHeight = 20;
         this.jumpCount += 1;
     }
 
@@ -71,9 +70,8 @@ class Ninja {
             this.ctx.drawImage(this.runImg, this.srcX, this.srcY, this.width, this.height, this.xPos, this.yPos, 66.67, 84);
         } else if (this.movement === 'jump') {
             this.updateFrame();
-            // debugger
             this.yPos -= this.jumpHeight;
-            this.jumpHeight -= 1.5;
+            this.jumpHeight -= 2;
             if (this.jumpHeight === 0) {
                 debugger
                 this.movement = 'drop';
@@ -88,15 +86,11 @@ class Ninja {
                 this.jumpCount = 0;
             } else {
                 this.yPos += this.jumpHeight;
-                this.jumpHeight += 1.5;
+                this.jumpHeight += 1;
             }
             this.ctx.drawImage(this.jumpImg, this.srcX, this.srcY, this.width, this.height, this.xPos, this.yPos, 66.67, 84);
         }
     }
-
-    // render() {
-    //     setInterval(this.draw, 53)
-    // }
 }
 
 export default Ninja;

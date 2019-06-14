@@ -1,5 +1,6 @@
 import Ninja from './ninja';
 import Parallax from './parallax';
+import Obstacles from './obstacle';
 
 class Game {
     constructor(canvas) {
@@ -9,7 +10,8 @@ class Game {
 
         this.render = this.render.bind(this);
         this.jump = this.jump.bind(this);
-        this.parallax();
+        this.createParallax();
+        this.createObstacles();
 
         document.addEventListener('keydown', e => this.jump(e));
     }
@@ -21,15 +23,25 @@ class Game {
         }
     }
 
-    parallax() {
+    createParallax() {
         this.background = new Parallax(this.ctx, this.canvas);
     }
 
+    createObstacles() {
+      this.obstacles = new Obstacles(this.ctx, this.canvas);
+    }
+
+    // drawObstacles() {
+    //     this.obstacles.forEach(obs => {
+    //         obs.draw();
+    //     });
+    // }
+
     render() {
         this.background.drawLayers();
-        // this.ctx.clearRect(0, 0, 800, 400);
         this.ninja.draw();
         this.ninja.frames++
+        this.obstacles.draw();
         window.requestAnimationFrame(this.render);
     }
 

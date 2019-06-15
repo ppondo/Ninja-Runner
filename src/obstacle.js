@@ -107,7 +107,7 @@ class Obstacles {
         } else if (this.crate2.xPos <= -this.canvas.width) {
             this.crate2.xPos = 1000;
         } else if (this.bush1.xPos <= -this.canvas.width) {
-            this.bush1.xPos = 1350;
+            this.bush1.xPos = 1430;
         } else if (this.bush2.xPos <= -this.canvas.width) {
             this.bush2.xPos = 1850;
         }

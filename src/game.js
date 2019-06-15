@@ -18,7 +18,7 @@ class Game {
 
     jump(e) {
         // debugger
-        if (e.key === 'ArrowUp' && this.ninja.jumpCount < 2) {
+        if ((e.key === 'ArrowUp' || e.key == 'w') && this.ninja.jumpCount < 2) {
             this.ninja.jump();
         }
     }

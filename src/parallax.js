@@ -1,12 +1,12 @@
 const LAYER1 = {
-    vel: 3.5,
+    vel: 4,
     src: "./assets/images/parallax/layer_01.png",
     x: 0,
     y: 0
 
 }
 const LAYER2 = {
-    vel: 3.25,
+    vel: 3.75,
     src: "./assets/images/parallax/layer_02.png",
     x: 0,
     y: 0
@@ -138,12 +138,12 @@ class Parallax {
         this.ctx.drawImage(this.eightImg, this.eight.x, this.eight.y);        
         this.ctx.drawImage(this.eightImg, this.eight.x + this.canvas.width, this.eight.y);  
 
-        this.ctx.drawImage(this.sevenImg, this.seven.x, this.seven.y);
-        this.ctx.drawImage(this.sevenImg, this.seven.x + this.canvas.width, this.seven.y);
-        
         this.ctx.drawImage(this.sixImg, this.six.x, this.six.y);
         this.ctx.drawImage(this.sixImg, this.six.x + this.canvas.width, this.six.y);
 
+        this.ctx.drawImage(this.sevenImg, this.seven.x, this.seven.y);
+        this.ctx.drawImage(this.sevenImg, this.seven.x + this.canvas.width, this.seven.y);
+        
         this.ctx.drawImage(this.fiveImg, this.five.x, this.five.y);
         this.ctx.drawImage(this.fiveImg, this.five.x + this.canvas.width, this.five.y);
 

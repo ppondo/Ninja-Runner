@@ -61,19 +61,25 @@ class Ninja {
     jump() {
         this.movement = 'jump';
         if (this.jumpCount === 1) {
-            this.jumpHeight = 8;
+            this.jumpHeight = 7;
         } else {
-            this.jumpHeight = 10;
+            this.jumpHeight = 8;
         }
         this.jumpCount += 1;
     }
 
     collidedWith(obstacle) {
-        let hitBoxX = obstacle.xPos + obstacle.width
-        let hitBoxY = obstacle.yPos + obstacle.height
+        let hitBoxX;
+        if (obstacle.width === (74 * 0.6)) {
+            hitBoxX = (obstacle.xPos + obstacle.width - 25);
+        } else {
+            hitBoxX = (obstacle.xPos + obstacle.width);
+        }
+        let hitBoxY = obstacle.yPos + obstacle.height;
+
         if (this.yPos > hitBoxY || (this.yPos + 84) < hitBoxY){
             return false;
-        } else if (this.xPos > (hitBoxX - 5) || (this.xPos + 66) < (hitBoxX - 30)) {
+        } else if (this.xPos > (hitBoxX) || (this.xPos + 66) < (hitBoxX - 30)) {
             return false;
         } else {
             return true;
@@ -91,7 +97,7 @@ class Ninja {
             this.yPos -= this.jumpHeight;
             this.jumpHeight -= 0.5;
             if (this.jumpHeight === 0) {
-                debugger
+                // debugger
                 this.movement = 'drop';
             }
             this.ctx.drawImage(this.jumpImg, this.srcX, this.srcY, this.width, this.height, this.xPos, this.yPos, 66.67, 84);

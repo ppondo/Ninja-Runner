@@ -4,7 +4,7 @@ const CRATE1 = {
     height: (106 * 0.5),
     xPos: 850,
     yPos: 307,
-    vel: 3.5
+    vel: 4
 };
 
 const CRATE2 = {
@@ -13,7 +13,7 @@ const CRATE2 = {
     height: (106 * 0.5),
     xPos: 1150,
     yPos: 307,
-    vel: 3.5
+    vel: 4
 };
 
 
@@ -23,7 +23,7 @@ const BUSH1 = {
     height: (74 * 0.6),
     xPos: 1475,
     yPos: 315,
-    vel: 3.5
+    vel: 4
 };
 
 
@@ -33,7 +33,7 @@ const BUSH2 = {
     height: (74 * 0.6),
     xPos: 1900,
     yPos: 315,
-    vel: 3.5
+    vel: 4
 };
 
 class Obstacles {
@@ -43,7 +43,7 @@ class Obstacles {
         this.crate2 = CRATE2;
         this.bush2 = BUSH2;
         this.getImages();
-        this.canvas = canvas
+        this.canvas = canvas;
         this.ctx = ctx;
 
         this.obstaclesArray = [this.crate1, this.crate2, this.bush1, this.bush2]

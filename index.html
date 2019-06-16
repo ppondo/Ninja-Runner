@@ -15,19 +15,19 @@
     </header>
     
     <div class="canvas-container"></div>
-    <canvas id="myCanvas" width="800" height="400"></canvas>
-    <!-- <canvas id="ten" width="700" height="400"></canvas>
-        <canvas id="nine" width="700" height="400"></canvas>
-        <canvas id="eight" width="700" height="400"></canvas>
-        <canvas id="seven" width="700" height="400"></canvas>
-        <canvas id="six" width="700" height="400"></canvas>
-        <canvas id="five" width="700" height="400"></canvas>
-        <canvas id="four" width="700" height="400"></canvas>
-        <canvas id="three" width="700" height="400"></canvas>
-        <canvas id="two" width="700" height="400"></canvas>
-        <canvas id="one" width="700" height="400"></canvas> -->
+        <canvas id="myCanvas" width="800" height="400"></canvas>
     </div>
     <br>
-    <!-- <button class='play' id='play'>Play</button> -->
+    <div class='game-over hide' id='game-over'>
+        <span>Oh no! Ninja hit an obstacle!</span>
+        <span class='game-over-msg'>Your score was: 27m</span>
+        <button class='try-again' id='try-again'>Try Again</button>
+    </div>
+    <div class='intro flex' id='intro'>
+        <div>Welcome to Ninja Runner</div>
+        <span>the game is simple, jump with the w or up arrow key to clear the boxes and spikey bushes.</span>
+        <!-- <p> have fun!</p> -->
+        <button class='play' id='play'>Play</button>
+    </div>
 </body>
 </html>

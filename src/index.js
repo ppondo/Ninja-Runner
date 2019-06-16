@@ -6,21 +6,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('myCanvas')
     const ctx = canvas.getContext('2d');
 
-    const gameOverDisplay = document.getElementById('game-over')
-    const introDisplay = document.getElementById('intro')
-    const playButton = document.getElementById('play')
-    const restartButton = document.getElementById('try-again')
+    const gameOverDisplay = document.getElementById('game-over');
+    const introDisplay = document.getElementById('intro');
+    const playButton = document.getElementById('play');
+    const restartButton = document.getElementById('try-again');
+    const score = document.getElementById('score');
+    const muteMusic = document.getElementById('mute-music');
+    const playMusic = document.getElementById('play-music');
 
+    const gameMusic = new Audio('./assets/sounds/background_music.mp3');
+    gameMusic.loop = true;
+    let isMuted = false;
+    
     const game = new Game(canvas, ctx);
     let gameLoopId;
-
+    
     function gameLoop() {
         game.render();
         gameLoopId = window.requestAnimationFrame(gameLoop);
-        if (game.gameOver === true) {
+
+        if (!isMuted) {
+            gameMusic.play();
+        }
+
+        if (game.gameOver) {
             window.cancelAnimationFrame(gameLoopId);
-            gameOverDisplay.classList.remove('hide')
-            gameOverDisplay.classList.add('flex')
+            gameOverDisplay.classList.remove('hide');
+            gameOverDisplay.classList.add('flex');
+            score.innerHTML = `${game.score}`
         } 
     }
 
@@ -29,17 +42,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     playButton.onclick = () => {
-        ctx.clearRect(0, 0, 800, 400)
-        introDisplay.classList.remove('flex')
-        introDisplay.classList.add('hide')
+        introDisplay.classList.remove('flex');
+        introDisplay.classList.add('hide');
+        game.resetGame();
         start();
     }
 
     restartButton.onclick = () => {
-        document.location.href = '' 
+        gameOverDisplay.classList.remove('flex');
+        gameOverDisplay.classList.add('hide');
         ctx.clearRect(0, 0, 800, 400)        
         game.resetGame();
+        // debugger;
         start();
+    }
+
+    muteMusic.onclick = () => {
+        isMuted = true;
+        gameMusic.pause();
+    }
+
+    playMusic.onclick = () => {
+        isMuted = false;
+        gameMusic.play();
     }
 })
 

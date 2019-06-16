@@ -63,23 +63,18 @@ class Ninja {
         if (this.jumpCount === 1) {
             this.jumpHeight = 7;
         } else {
-            this.jumpHeight = 8;
+            this.jumpHeight = 8.5;
         }
         this.jumpCount += 1;
     }
 
     collidedWith(obstacle) {
-        let hitBoxX;
-        if (obstacle.width === (74 * 0.6)) {
-            hitBoxX = (obstacle.xPos + obstacle.width - 25);
-        } else {
-            hitBoxX = (obstacle.xPos + obstacle.width);
-        }
+        let hitBoxX = obstacle.xPos + obstacle.width;
         let hitBoxY = obstacle.yPos + obstacle.height;
 
         if (this.yPos > hitBoxY || (this.yPos + 84) < hitBoxY){
             return false;
-        } else if (this.xPos > (hitBoxX) || (this.xPos + 66) < (hitBoxX - 30)) {
+        } else if (this.xPos > (hitBoxX - 15) || (this.xPos + 66) < (hitBoxX - 25)) {
             return false;
         } else {
             return true;

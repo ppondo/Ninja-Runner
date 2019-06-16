@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ninja Runner</title>
     <link href="./assets/stylesheets/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
     <script type="text/javascript" src="./dist/bundle.js"></script>
@@ -16,16 +17,29 @@
     
     <div class="canvas-container"></div>
         <canvas id="myCanvas" width="800" height="400"></canvas>
+        <div class='info-box'>
+            <div class='links'>
+                <a href="https://github.com/ppondo/Ninja-Runner"><i class="fab fa-github"></i></a> 
+                <a href="https://www.linkedin.com/in/patrickpondo/"><i class="fab fa-linkedin"></i></a> 
+            </div>
+            <div class="creator">
+                <span>Created By Patrick Pondo</span>
+            </div>
+            <div class='controls'>
+                <button id='play-music'><i class="fas fa-volume-up"></i></button>
+                <button id='mute-music'><i class="fas fa-volume-mute"></i></button>
+            </div>
+        </div>
     </div>
     <br>
     <div class='game-over hide' id='game-over'>
-        <span>Oh no! Ninja hit an obstacle!</span>
-        <span class='game-over-msg'>Your score was: 27m</span>
+        <span class='game-over-top'>Game over</span>
+        <span class='game-over-bottom'>Your score was: <span id='score'></span> meters</span>
         <button class='try-again' id='try-again'>Try Again</button>
     </div>
     <div class='intro flex' id='intro'>
         <div>Welcome to Ninja Runner</div>
-        <span>the game is simple, jump with the w or up arrow key to clear the boxes and spikey bushes.</span>
+        <span>the game is simple, use the w or up arrow key to jump over the boxes and spikey bushes.</span>
         <!-- <p> have fun!</p> -->
         <button class='play' id='play'>Play</button>
     </div>

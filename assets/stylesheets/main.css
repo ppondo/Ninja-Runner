@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(187, 147, 189);    
+    background-color: rgb(242, 218, 211);    
     font-family: samuraiBob;
 } 
 
@@ -17,7 +17,7 @@ canvas {
     display: block;
     position: absolute;
     top: 99px;
-    border: 4px solid rgb(70, 27, 71);
+    border: 4px solid #e07761;
     border-radius: 6px;
     background: url(../images/parallax/full_bg.png);
 }
@@ -25,7 +25,8 @@ canvas {
 .title {
     font-size: 85px;
     text-align: center;
-    color: rgb(70, 27, 71);
+    /* color: #e07761; */
+    color: #2e5a5d;
 }
 
 .canvas-container {
@@ -36,14 +37,14 @@ canvas {
 
 .game-over {
     text-transform: uppercase;
-    color: #461b47;
+    color: #2e5a5d;
     font-size: 29px;
-    border: 4px solid rgb(70, 27, 71);
+    border: 4px solid #e07761;
     border-radius: 6px;
     padding: 35px;
     position: absolute;
-    top: 170px;
-    background-color: rgb(187, 147, 189);
+    top: 157px;
+    background-color: rgb(238, 182, 164);
     max-height: 214px;
 }
 
@@ -62,8 +63,8 @@ canvas {
     border: none;
     padding: 9px 20px;
     border-radius: 6px;
-    background-color: rgb(70, 27, 71);
-    color: rgb(187, 147, 189);
+    background-color: #e07761;
+    color: rgb(242, 218, 211);
     margin: 20px 0;
     font-family: samuraiBob;
     text-transform: uppercase;
@@ -72,7 +73,7 @@ canvas {
 
 .try-again:hover {
     cursor: pointer;
-    animation: shake 1.2s;
+    animation: spin 1.2s;
     color: rgb(242, 218, 211);
 }
 
@@ -81,29 +82,34 @@ canvas {
     outline: none;
 }
 
-.game-over-msg {
+.game-over-bottom {
     padding-bottom: 20px;
 }
 
-@keyframes shake {
+.game-over-top {
+   font-size: 65px;
+   text-transform: uppercase;
+}
+
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); } 
 }
 
 .intro {
     text-transform: uppercase;
-    color: #461b47;
-    border: 4px solid rgb(70, 27, 71);
+    color: #2e5a5d;
+    border: 4px solid #e07761;
     border-radius: 6px;
     padding: 35px;
     position: absolute;
     top: 170px;
-    background-color: rgb(187, 147, 189);
-    max-width: 300px;
+    background-color: rgb(238, 182, 164);
+    max-width: 330px;
 }
 
 .intro > div {
-    font-size: 34px;
+    font-size: 38px;
 }
 
 .intro > span {
@@ -119,11 +125,11 @@ canvas {
 
 .play {
     border: none;
-    margin-top: 5px;
+    margin-top: 17px;
     padding: 9px 20px;
     border-radius: 6px;
-    background-color: rgb(70, 27, 71);
-    color: rgb(187, 147, 189);
+    background-color: #e07761;
+    color: rgb(242, 218, 211);
     font-family: samuraiBob;
     text-transform: uppercase;
     font-size: 28px;
@@ -131,10 +137,69 @@ canvas {
 
 .play:hover {
     cursor: pointer;
+    animation: spin 1.2s;
     color: rgb(242, 218, 211);
 }
 
 .play:focus {
     border: none;
     outline: none;
+}
+
+.info-box {
+    border: 4px solid #e07761;
+    border-radius: 6px;
+    margin-top: 15px;
+    width: 800px;
+    background-color: rgb(238, 182, 164);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links {
+    padding: 5px 10px;
+}
+
+.links > a {
+    text-decoration: none;
+    color: #2e5a5d;
+    font-size: 40px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.links > a > i:hover {
+    cursor: pointer;
+    animation: spin 1.2s;
+}
+
+.controls {
+    padding: 5px 10px; 
+    color: #2e5a5d;
+    font-size: 40px;
+    text-align: center;
+}
+
+.controls > button {
+    padding: 0 10px;
+    color: #2e5a5d;
+    font-size: 40px;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: rgb(238, 182, 164); 
+}
+
+.controls > button > i:hover {
+    cursor: pointer;
+    animation: spin 1.2s;
+}
+
+.creator {
+    padding: 5px 10px; 
+    color: #2e5a5d;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
 }

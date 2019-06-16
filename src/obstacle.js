@@ -112,6 +112,13 @@ class Obstacles {
             this.bush2.xPos = 1850;
         }
     }
+
+    resetObstacles() {
+        this.crate1.xPos = 850;
+        this.crate2.xPos = 1150;
+        this.bush1.xPos = 1475;
+        this.bush2.xPos = 1900;
+    }
 }
 
 export default Obstacles;

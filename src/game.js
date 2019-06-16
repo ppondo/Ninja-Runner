@@ -46,13 +46,12 @@ class Game {
             if (this.ninja.collidedWith(obs)) {
                 // debugger;
                 this.gameOver = true;
-                
             }
         });
     }
 
     updateScore() {
-        if (this.ninja.frames / 30 === 0) {
+        if (this.ninja.frames % 20 === 0) {
             this.score++
         }
     }
@@ -63,14 +62,16 @@ class Game {
         this.ninja.frames++
         this.obstacles.draw();
         this.detectCollision();
+        this.updateScore();
     }
 
     resetGame() {
         this.ctx.clearRect(0, 0, 800, 400)
-        this.gameOver = false;
+        this.score = 0;
         this.createNinja();
-        this.createParallax();
-        this.createObstacles();
+        this.background.resetParallax();
+        this.obstacles.resetObstacles();
+        this.gameOver = false;
     }
 
 }

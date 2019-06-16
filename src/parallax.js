@@ -181,6 +181,20 @@ class Parallax {
             this.ten.x = 0;
         }
     }
+
+    resetParallax() {
+        this.ctx.clearRect(0, 0, 800, 400);
+        this.one.x = 0;
+        this.two.x = 0;
+        this.three.x = 0;
+        this.four.x = 0;
+        this.five.x = 0;
+        this.six.x = 0;
+        this.seven.x = 0;
+        this.eight.x = 0;
+        this.nine.x = 0;
+        this.ten.x = 0;
+    }
 }
 
 export default Parallax;

@@ -74,7 +74,7 @@ class Ninja {
 
         if (this.yPos > hitBoxY || (this.yPos + 84) < hitBoxY){
             return false;
-        } else if (this.xPos > (hitBoxX - 15) || (this.xPos + 66) < (hitBoxX - 25)) {
+        } else if (this.xPos > (hitBoxX - 15) || (this.xPos + 66) < (hitBoxX - 40)) {
             return false;
         } else {
             return true;

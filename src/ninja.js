@@ -63,7 +63,7 @@ class Ninja {
         if (this.jumpCount === 1) {
             this.jumpHeight = 7;
         } else {
-            this.jumpHeight = 8.5;
+            this.jumpHeight = 9;
         }
         this.jumpCount += 1;
     }

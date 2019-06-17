@@ -29,7 +29,7 @@ class Shuriken {
         if (this.currentFrame === this.frameCount) {
             this.currentFrame = 1;
         }
-        if(this.frames % 30 === 0) {
+        if(this.frames % 2 === 0) {
             this.currentFrame = (this.currentFrame + 1);
         }
         this.srcX = this.currentFrame * this.width;
@@ -37,7 +37,6 @@ class Shuriken {
 
     drawShuriken() {
         this.shuriken.xPos -= this.shuriken.vel;
-
         this.updateFrame();
         this.ctx.drawImage(
             this.shurikenImg,
@@ -45,10 +44,10 @@ class Shuriken {
             this.srcY,
             this.width,
             this.height,
-            this.shuriken.xPos,
-            this.shuriken.yPos,
-            30,
-            30,
+            this.xPos,
+            this.yPos,
+            225,
+            225
         );
 
         if (this.shuriken.xPos <= -this.canvas.width) {

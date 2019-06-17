@@ -63,8 +63,8 @@ class Game {
         this.ninja.draw();
         this.ninja.frames++
         this.obstacles.draw();
-        this.shuriken.drawShuriken();
-        this.shuriken.frames++
+        // this.shuriken.drawShuriken();
+        // this.shuriken.frames++
         this.detectCollision();
         this.updateScore();
     }
@@ -75,7 +75,7 @@ class Game {
         this.createNinja();
         this.background.resetParallax();
         this.obstacles.resetObstacles();
-        this.shuriken.resetShuriken();
+        // this.shuriken.resetShuriken();
         this.gameOver = false;
     }
 

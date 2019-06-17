@@ -196,7 +196,7 @@ canvas {
     animation: spin 1.2s;
 }
 
-.controls > button:focus {
+.glow {
     text-shadow: 2px 1px 2px #e07761;
 }
 

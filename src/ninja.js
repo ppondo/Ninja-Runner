@@ -10,6 +10,11 @@ const DROP = {
     src: './assets/images/ninja_jump/ninja_drop.png'
 }
 
+
+const SLIDE = {
+    src: './assets/images/ninja_run/ninja_slide.png'
+}
+
 class Ninja {
     constructor(ctx) {
         this.ctx = ctx;
@@ -31,7 +36,7 @@ class Ninja {
 
         this.updateFrame = this.updateFrame.bind(this);
         this.draw = this.draw.bind(this);
-        this.jump = this.jump.bind(this);
+        this.action = this.action.bind(this);
     }
 
     getImages() {
@@ -43,6 +48,9 @@ class Ninja {
 
         this.dropImg = new Image();
         this.dropImg.src = DROP.src;
+
+        this.slideImg = new Image();
+        this.slideImg.src = SLIDE.src;
     }
 
     updateFrame() {
@@ -58,15 +66,22 @@ class Ninja {
         // this.ctx.clearRect(this.xPos, this.yPos, this.width, this.height);
     }
 
-    jump() {
-        this.movement = 'jump';
-        if (this.jumpCount === 1) {
-            this.jumpHeight = 7;
+    action(type) {
+        if (type === 'jump') {
+            this.movement = 'jump';
+            if (this.jumpCount === 1) {
+                this.jumpHeight = 7;
+            } else {
+                this.jumpHeight = 9;
+            }
+            this.jumpCount += 1;
+        } else if (type === 'slide'){
+            this.movement = 'slide'
         } else {
-            this.jumpHeight = 9;
+            this.movement = 'running'
         }
-        this.jumpCount += 1;
     }
+
 
     collidedWith(obstacle) {
         let hitBoxX = obstacle.xPos + obstacle.width;
@@ -102,12 +117,16 @@ class Ninja {
                 this.movement = 'running';
                 this.yPos = 280;
                 this.jumpHeight = 0;
-                this.jumpCount = 0;
+                this.jumpCount = 0;                
             } else {
                 this.yPos += this.jumpHeight;
                 this.jumpHeight += 0.5;
             }
             this.ctx.drawImage(this.jumpImg, this.srcX, this.srcY, this.width, this.height, this.xPos, this.yPos, 66.67, 84);
+        } else if (this.movement = 'slide') {
+            this.yPos = 310;
+            this.updateFrame();
+            this.ctx.drawImage(this.slideImg, this.srcX, this.srcY, this.width, 187, this.xPos, this.yPos, 66.67, 62.33);
         }
     }
 }

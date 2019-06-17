@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gameLoopId = window.requestAnimationFrame(gameLoop);
 
         if (!isMuted) {
+            playMusic.classList.add('glow')
             gameMusic.play();
         }
 
@@ -60,11 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
     muteMusic.onclick = () => {
         isMuted = true;
         gameMusic.pause();
+        playMusic.classList.remove('glow')
+        muteMusic.classList.add('glow')
     }
 
     playMusic.onclick = () => {
         isMuted = false;
         gameMusic.play();
+        muteMusic.classList.remove('glow')
+        playMusic.classList.add('glow')
     }
 })
 

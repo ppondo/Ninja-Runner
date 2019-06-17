@@ -144,8 +144,8 @@ class Parallax {
         this.ctx.drawImage(this.sevenImg, this.seven.x, this.seven.y);
         this.ctx.drawImage(this.sevenImg, this.seven.x + this.canvas.width, this.seven.y);
         
-        this.ctx.drawImage(this.fiveImg, this.five.x, this.five.y);
-        this.ctx.drawImage(this.fiveImg, this.five.x + this.canvas.width, this.five.y);
+        // this.ctx.drawImage(this.fiveImg, this.five.x, this.five.y);
+        // this.ctx.drawImage(this.fiveImg, this.five.x + this.canvas.width, this.five.y);
 
         this.ctx.drawImage(this.fourImg, this.four.x, this.four.y);
         this.ctx.drawImage(this.fourImg, this.four.x + this.canvas.width, this.four.y);

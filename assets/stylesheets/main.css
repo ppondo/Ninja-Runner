@@ -196,6 +196,10 @@ canvas {
     animation: spin 1.2s;
 }
 
+.controls > button:focus {
+    text-shadow: 2px 1px 2px #e07761;
+}
+
 .creator {
     padding: 5px 10px; 
     color: #2e5a5d;

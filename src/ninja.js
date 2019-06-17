@@ -72,9 +72,9 @@ class Ninja {
         let hitBoxX = obstacle.xPos + obstacle.width;
         let hitBoxY = obstacle.yPos + obstacle.height;
 
-        if (this.yPos > hitBoxY || (this.yPos + 84) < hitBoxY){
+        if (this.yPos > (hitBoxY) || (this.yPos + 84) < hitBoxY){
             return false;
-        } else if (this.xPos > (hitBoxX - 15) || (this.xPos + 66) < (hitBoxX - 40)) {
+        } else if (this.xPos > (hitBoxX) || (this.xPos + 66) < (hitBoxX - 45)) {
             return false;
         } else {
             return true;

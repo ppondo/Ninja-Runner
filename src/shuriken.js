@@ -33,6 +33,7 @@ class Shuriken {
             this.currentFrame = (this.currentFrame + 1);
         }
         this.srcX = this.currentFrame * this.width;
+        // this.ctx.clearRect(0,0,this.width, this.height);
     }
 
     drawShuriken() {
@@ -49,7 +50,7 @@ class Shuriken {
             35,
             36.5
         );
-
+        
         if (this.xPos <= -this.canvas.width) {
             this.xPos = 900;
         }

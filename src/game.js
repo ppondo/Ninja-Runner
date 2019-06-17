@@ -54,6 +54,14 @@ class Game {
                 this.gameOver = true;
             }
         });
+
+        
+    }
+
+    shurikenCollision() {
+        if (this.ninja.shurikenColl(this.shuriken)) {
+            this.gameOver = true;
+        }
     }
 
     updateScore() {
@@ -70,6 +78,7 @@ class Game {
         this.shuriken.drawShuriken();
         this.shuriken.frames++
         this.detectCollision();
+        this.shurikenCollision();
         this.updateScore();
     }
 

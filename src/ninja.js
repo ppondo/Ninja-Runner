@@ -96,6 +96,21 @@ class Ninja {
         }
     }
 
+    shurikenColl(shuriken) {
+        let shurBoxX = shuriken.xPos + 31;
+        let shurBoxY = shuriken.yPos + 32.5;
+
+        // debugger
+        if ((this.yPos + 84) < (shuriken.yPos + 4) || (this.yPos) > (shurBoxY)) {
+            return false;
+        } else if ((this.xPos + 66) < (shuriken.xPos + 4) || (this.xPos) > (shurBoxX)) {
+            return false;
+        } else {
+            // debugger;
+            return true;
+        }
+    }
+
     draw() {
         this.xPos -= this.vel;
 

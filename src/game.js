@@ -23,15 +23,22 @@ class Game {
         // debugger
         if ((e.key === 'ArrowUp' || e.key === 'w') && this.ninja.jumpCount < 2) {
             this.ninja.action('jump');
-        } else if (e.key === 'ArrowDown' || e.key === 's'){
-            this.ninja.action('slide')
+        } else if ((e.key === 'ArrowDown' || e.key === 's') && this.ninja.yPos === 280){
+            this.ninja.action('slide');
         }
     }
 
+    // run() {
+    //     this.ninja.action('running');
+    // }
 
     createGameControls() {
         document.addEventListener('keydown', e => this.action(e));
-        // document.addEventListener('keyup', e => this.run(e));
+        document.addEventListener('keyup', e => {
+            if (e.key === 's' || e.key === 'ArrowDown' && this.ninja.movement === 'slide') {
+                this.ninja.movement = 'running';
+            }
+        });
     }
 
     createNinja() {

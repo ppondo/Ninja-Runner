@@ -103,13 +103,13 @@ class Obstacles {
         );
 
         if (this.crate1.xPos <= -this.canvas.width) {
-            this.crate1.xPos = 845;
+            this.crate1.xPos = 975;
         } else if (this.crate2.xPos <= -this.canvas.width) {
-            this.crate2.xPos = 1000;
+            this.crate2.xPos = 1090;
         } else if (this.bush1.xPos <= -this.canvas.width) {
-            this.bush1.xPos = 1430;
+            this.bush1.xPos = this.crate2.xPos + 510;
         } else if (this.bush2.xPos <= -this.canvas.width) {
-            this.bush2.xPos = 1850;
+            this.bush2.xPos = this.bush1.xPos + 300;
         }
     }
 

@@ -8,8 +8,8 @@ class Shuriken {
         this.ctx = ctx;
         this.canvas = canvas
         this.xPos = 900
-        this.yPos = 260
-        this.vel = 5.5;
+        this.yPos = 267
+        this.vel = 6.7;
         this.getImages();
         this.frameCount = 3;
         this.currentFrame = 0;
@@ -50,8 +50,8 @@ class Shuriken {
             35,
             36.5
         );
-        
-        if (this.xPos <= -this.canvas.width) {
+
+        if (this.xPos <= (-this.canvas.width * 2.6)) {
             this.xPos = 900;
         }
     }

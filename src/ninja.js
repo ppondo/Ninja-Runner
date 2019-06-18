@@ -75,21 +75,21 @@ class Ninja {
                 this.jumpHeight = 9;
             }
             this.jumpCount += 1;
-        } else if (type === 'slide'){
-            this.movement = 'slide'
+        } else if ((type === 'slide') && (this.jumpHeight === 0)) {
+            this.movement = 'slide';
         } else {
-            this.movement = 'running'
+            this.movement = 'running';
         }
     }
 
 
     collidedWith(obstacle) {
-        let hitBoxX = obstacle.xPos + obstacle.width;
-        let hitBoxY = obstacle.yPos + obstacle.height;
+        let hitBoxX = obstacle.xPos + obstacle.width - 25;
+        let hitBoxY = obstacle.yPos + obstacle.height - 20;
 
-        if (this.yPos > (hitBoxY) || (this.yPos + 84) < hitBoxY){
+        if (this.yPos > (hitBoxY) || (this.yPos + 84) < obstacle.yPos + 20){
             return false;
-        } else if (this.xPos > (hitBoxX) || (this.xPos + 66) < (hitBoxX - 45)) {
+        } else if (this.xPos > (hitBoxX) || (this.xPos + 66) < (obstacle.xPos + 30)) {
             return false;
         } else {
             return true;
@@ -97,13 +97,13 @@ class Ninja {
     }
 
     shurikenColl(shuriken) {
-        let shurBoxX = shuriken.xPos + 31;
-        let shurBoxY = shuriken.yPos + 32.5;
+        let shurBoxX = shuriken.xPos + 24;
+        let shurBoxY = shuriken.yPos + 25.5;
 
         // debugger
-        if ((this.yPos + 84) < (shuriken.yPos + 4) || (this.yPos) > (shurBoxY)) {
+        if ((this.yPos + 84) < (shuriken.yPos + 15) || (this.yPos) > (shurBoxY)) {
             return false;
-        } else if ((this.xPos + 66) < (shuriken.xPos + 4) || (this.xPos) > (shurBoxX)) {
+        } else if ((this.xPos + 66) < (shuriken.xPos + 19) || (this.xPos) > (shurBoxX)) {
             return false;
         } else {
             // debugger;
@@ -115,6 +115,7 @@ class Ninja {
         this.xPos -= this.vel;
 
         if (this.movement === 'running') {
+            this.yPos = 280;
             this.updateFrame();
             this.ctx.drawImage(this.runImg, this.srcX, this.srcY, this.width, this.height, this.xPos, this.yPos, 66.67, 84);
         } else if (this.movement === 'jump') {
@@ -138,7 +139,7 @@ class Ninja {
                 this.jumpHeight += 0.5;
             }
             this.ctx.drawImage(this.jumpImg, this.srcX, this.srcY, this.width, this.height, this.xPos, this.yPos, 66.67, 84);
-        } else if (this.movement = 'slide') {
+        } else if (this.movement === 'slide') {
             this.yPos = 310;
             this.updateFrame();
             this.ctx.drawImage(this.slideImg, this.srcX, this.srcY, this.width, 187, this.xPos, this.yPos, 66.67, 62.33);

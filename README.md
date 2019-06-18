@@ -4,16 +4,16 @@
   
 ## Functionality and MVP Features
 <ul>
-    <li>Collision detection for when ninja falls off platform, collects shurikens, or hits obstacle.
-      <p>Falling off of a platform or hitting an obstacle will result in rendering 'game over' message.</p>
+    <li>Collision detection for when ninja hits a box, shuriken, or spikey bush.
+      <p>colliding with any of the obstacles will result in rendering 'game over' message.</p>
     </li>
     <li>Ninja's ability to slide and jump.
        <p>This will include different animations for jumping and sliding, jumping will allow the ninja to get over obstacles, while sliding will allow the ninja to get underneath obstcales the ninja would otherwise not be able to get past.</p>
     </li>
-    <li>Properly measuring distance and counting shurikens for total score.</li>
+    <li>Properly measuring distance and returning that for final score.</li>
     <li>Background music that is mutable</li>
     <li>Parallax background to simulate running experience.
-      <p>Different parts of the background will scroll at different rates as the player moves. For Instance the sky will move slower than a tree as the tree is 'closer' to the character.</p>
+      <p>Different parts of the background will scroll at different rates as the player moves. For Instance the sky will move slower than the trees as the trees are 'closer' to the character.</p>
     </li>
 </ul>
 
@@ -26,13 +26,12 @@
 
 ### File Structure
 <ul>
-    <li>Game.js</li>
-    <li>Platform.js</li>
-    <li>Ninja.js</li>
-    <li>Obstacle.js</li>
-    <li>Shuriken.js</li>
-    <li>Parallax.js</li>
-    <li>Sidebar.js</li>
+    <li>index.js</li>
+    <li>game.js</li>
+    <li>ninja.js</li>
+    <li>obstacle.js</li>
+    <li>shuriken.js</li>
+    <li>parallax.js</li>
 </ul>
 
 ## Implementation Timeline
@@ -46,13 +45,13 @@
       <p>Work on creating obstacles and shurikens and rendering them on the canvas. </p>
     </li>
     <li>Day 3
-      <p>Implement collision detection for falling off runnable surface, shurikens, and obstacles. </p>
+      <p>Implement collision detection for shurikens and obstacles. </p>
       <p>Implement scoring and game over logic.</p>
       <p>Create parallax background.</p>
     </li>
     <li>Day 4
       <p>Work on styling and aesthetics</p>
-      <p>Work out any bugs and complete MVPs  </p>  
+      <p>Work out any bugs and complete MVPs  </p>
     </li>
 </ul>
 

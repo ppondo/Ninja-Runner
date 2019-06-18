@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const gameMusic = new Audio('./assets/sounds/background_music.mp3');
     gameMusic.loop = true;
+    gameMusic.volume = 0.1;
     let isMuted = false;
     
     const game = new Game(canvas, ctx);

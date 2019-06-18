@@ -87,6 +87,9 @@ class Game {
         this.detectCollision();
         this.shurikenCollision();
         this.updateScore();
+        if (this.score === 168) {
+            this.obstacles.resetObstacles();
+        }
     }
 
     resetGame() {

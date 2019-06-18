@@ -201,6 +201,14 @@ canvas {
 }
 
 .creator {
+    padding: 5px 10px 5px 25px; 
+    color: #2e5a5d;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.music-credit {
     padding: 5px 10px; 
     color: #2e5a5d;
     font-size: 25px;

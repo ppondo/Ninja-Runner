@@ -196,8 +196,9 @@ canvas {
     animation: spin 1.2s;
 }
 
-.glow {
-    text-shadow: 2.5px 1.5px 3px #e07761;
+.glow > i{
+    /* text-shadow: 2.5px 1.5px 3px #e07761; */
+    color: #e07761;
 }
 
 .creator {

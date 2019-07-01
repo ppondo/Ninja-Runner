@@ -2,10 +2,10 @@
 
    Ninja Runner is a JavaScript game where the player must run through the streets avoiding obstacles to get the highest score. Collecting shurikens along the way will increase your score! The goal is to get the furthest distance without falling off of a platform or hitting an obstacle.
 
-<div style='display:flex;'>
+<div style="display:flex;">
   <img src="https://media.giphy.com/media/MFyyImydmpCMDcq173/giphy.gif" alt="Ninja-Runner">
 
-  <a href='https://ppondo.github.io/Ninja-Runner/'><img style='width:116px;height:219px;' src="https://github.com/ppondo/Ninja-Runner/blob/master/assets/images/ninja-man.png" alt='Ninja'></a>
+  <a href='https://ppondo.github.io/Ninja-Runner/'><img style="height:290px;margin-left:25px;" src="https://github.com/ppondo/Ninja-Runner/blob/master/assets/images/ninja-man.png" alt='Ninja'></a>
 </div>
 
 ## Technologies

@@ -220,3 +220,13 @@ canvas {
 .music {
     font-size: 14px;
 }
+
+
+.readme {
+    display: flex
+}
+
+.read-pic {
+    height: 290px;
+    margin-left: 20px;
+}

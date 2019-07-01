@@ -5,7 +5,7 @@
 <div style='display:flex;'>
   <img src="https://media.giphy.com/media/MFyyImydmpCMDcq173/giphy.gif" alt="Ninja-Runner">
 
-  ![Ninja](https://github.com/ppondo/Ninja-Runner/blob/master/assets/images/ninja-man.png <a> href='https://ppondo.github.io/Ninja-Runner'</a>)
+  <a href='https://pondo.github.io/Ninja-Runner'><img src="https://github.com/ppondo/Ninja-Runner/blob/master/assets/images/ninja-man.png" alt='Ninja'></a>
 </div>
 
 ## Technologies

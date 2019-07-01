@@ -17,6 +17,7 @@
 ## Highlights
 
 This is the function to update the frame of the ninja spritesheet. The most difficult part of developing this function was making the ninja render at a lower frame rate. The ninja spritesheet had 10 frames, so the animation was too fast at 60 frames per second. To remedy this, I kept track of the frame count and updated the ninja's running frame on every second frame, rendering the ninja at 30 FPS.
+
 ```JavaScript
  updateFrame() {
         if (this.currentFrame === this.frameCount) {
@@ -35,15 +36,15 @@ This is the function to update the frame of the ninja spritesheet. The most diff
 ## Functionality and Features
 <ul>
     <li>Collision detection for when ninja hits a box, shuriken, or spikey bush.
-      <p>colliding with any of the obstacles will result in rendering 'game over' message.</p>
+      <p>colliding with any of the obstacles results in rendering 'game over' message.</p>
     </li>
     <li>Ninja's ability to slide and jump.
-       <p>This will include different animations for jumping and sliding, jumping will allow the ninja to get over obstacles, while sliding will allow the ninja to get underneath obstcales the ninja would otherwise not be able to get past.</p>
+       <p>This includes different animations for jumping and sliding, jumping allows the ninja to get over obstacles, while sliding allows the ninja to get underneath obstcales the ninja is not be able to run past.</p>
     </li>
-    <li>Properly measuring distance and returning that for final score.</li>
+    <li>Properly measures distance and returns that for the final score.</li>
     <li>Background music that is mutable</li>
     <li>Parallax background to simulate running experience.
-      <p>Different parts of the background will scroll at different rates as the player moves. For Instance the sky will move slower than the trees as the trees are 'closer' to the character.</p>
+      <p>Different parts of the background scroll at different rates as the player moves. For Instance the sky layer moves slower than the trees as the trees are 'closer' to the character.</p>
     </li>
 </ul>
 

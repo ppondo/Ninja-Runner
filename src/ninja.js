@@ -63,7 +63,6 @@ class Ninja {
             this.currentFrame = 8;
         }
         this.srcX = this.currentFrame * this.width;
-        // this.ctx.clearRect(this.xPos, this.yPos, this.width, this.height);
     }
 
     action(type) {

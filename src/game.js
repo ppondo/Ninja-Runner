@@ -28,10 +28,6 @@ class Game {
         }
     }
 
-    // run() {
-    //     this.ninja.action('running');
-    // }
-
     createGameControls() {
         document.addEventListener('keydown', e => this.action(e));
         document.addEventListener('keyup', e => {

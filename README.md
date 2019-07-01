@@ -5,7 +5,7 @@
 <div style="display:flex;">
   <img src="https://media.giphy.com/media/MFyyImydmpCMDcq173/giphy.gif" alt="Ninja-Runner">
 
-  <a href='https://ppondo.github.io/Ninja-Runner/'><img style="height:290px;margin-left:25px;" src="https://github.com/ppondo/Ninja-Runner/blob/master/assets/images/ninja-man.png" alt='Ninja'></a>
+  <a href='https://ppondo.github.io/Ninja-Runner/'><img height="290" src="https://github.com/ppondo/Ninja-Runner/blob/master/assets/images/ninja-man.png" alt='Ninja'></a>
 </div>
 
 ## Technologies

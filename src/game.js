@@ -53,7 +53,6 @@ class Game {
     detectCollision() {
         this.obstacles.obstaclesArray.forEach(obs => {
             if (this.ninja.collidedWith(obs)) {
-                // debugger;
                 this.gameOver = true;
             }
         });

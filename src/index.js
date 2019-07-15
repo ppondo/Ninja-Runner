@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
         gameOverDisplay.classList.add('hide');
         ctx.clearRect(0, 0, 800, 400)        
         game.resetGame();
-        // debugger;
         start();
     }
 

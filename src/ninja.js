@@ -105,7 +105,6 @@ class Ninja {
         } else if ((this.xPos + 66) < (shuriken.xPos + 19) || (this.xPos) > (shurBoxX)) {
             return false;
         } else {
-            // debugger;
             return true;
         }
     }
@@ -122,7 +121,6 @@ class Ninja {
             this.yPos -= this.jumpHeight;
             this.jumpHeight -= 0.5;
             if (this.jumpHeight === 0) {
-                // debugger
                 this.movement = 'drop';
             }
             this.ctx.drawImage(this.jumpImg, this.srcX, this.srcY, this.width, this.height, this.xPos, this.yPos, 66.67, 84);

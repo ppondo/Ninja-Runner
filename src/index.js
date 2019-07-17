@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     restartButton.onclick = () => {
         gameOverDisplay.classList.remove('flex');
         gameOverDisplay.classList.add('hide');
-        ctx.clearRect(0, 0, 800, 400)        
+        ctx.clearRect(0, 0, 800, 400);        
         game.resetGame();
         start();
     }
@@ -61,15 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
     muteMusic.onclick = () => {
         isMuted = true;
         gameMusic.pause();
-        playMusic.classList.remove('glow')
-        muteMusic.classList.add('glow')
+        playMusic.classList.remove('glow');
+        muteMusic.classList.add('glow');
     }
 
     playMusic.onclick = () => {
         isMuted = false;
         gameMusic.play();
-        muteMusic.classList.remove('glow')
-        playMusic.classList.add('glow')
+        muteMusic.classList.remove('glow');
+        playMusic.classList.add('glow');
     }
 })
 

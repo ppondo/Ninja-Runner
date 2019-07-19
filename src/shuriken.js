@@ -33,7 +33,6 @@ class Shuriken {
             this.currentFrame = (this.currentFrame + 1);
         }
         this.srcX = this.currentFrame * this.width;
-        // this.ctx.clearRect(0,0,this.width, this.height);
     }
 
     drawShuriken() {

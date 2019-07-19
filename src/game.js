@@ -20,7 +20,6 @@ class Game {
     }
 
     action(e) {
-        // debugger
         if ((e.key === 'ArrowUp' || e.key === 'w') && this.ninja.jumpCount < 2) {
             this.ninja.action('jump');
         } else if ((e.key === 'ArrowDown' || e.key === 's') && this.ninja.yPos === 280){

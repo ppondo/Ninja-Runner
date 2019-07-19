@@ -9,14 +9,14 @@
 
 ## Technologies
 <ul>
-    <li>HTML 5 Canvas for displaying game</li>
+    <li>HTML5 Canvas for displaying game</li>
     <li>Vanilla JavaScript for game logic and functionality</li>
     <li>CSS for UI styling</li>
 </ul>
 
 ## Highlights
 
-This is the function to update the frame of the ninja spritesheet. The most difficult part of developing this function was making the ninja render at a lower frame rate. The ninja spritesheet had 10 frames, so the animation was too fast at 60 frames per second. To remedy this, I kept track of the frame count and updated the ninja's running frame on every second frame, rendering the ninja at 30 FPS.
+This is the function to update the frame of the ninja spritesheet. The most difficult part of developing this function was making the ninja render at a lower frame rate. The ninja spritesheet had 10 frames, so the animation was too fast at 60 frames per second. To remedy this, I kept track of the frame count and updated the ninja's running frame on every second frame, rendering the ninja at 30 frames per second.
 
 ```JavaScript
  updateFrame() {

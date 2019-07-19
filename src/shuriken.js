@@ -10,7 +10,6 @@ class Shuriken {
         this.xPos = 900
         this.yPos = 267
         this.vel = 6.7;
-        this.getImages();
         this.frameCount = 3;
         this.currentFrame = 0;
         this.width = 70;
@@ -18,6 +17,7 @@ class Shuriken {
         this.srcX = 0;
         this.srcY = 0;
         this.frames = 0;
+        this.getImages();
     }
 
     getImages() {

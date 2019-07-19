@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playButton = document.getElementById('play');
     const restartButton = document.getElementById('try-again');
     const score = document.getElementById('score');
+
     const muteMusic = document.getElementById('mute-music');
     const playMusic = document.getElementById('play-music');
 
